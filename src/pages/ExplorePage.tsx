@@ -45,7 +45,7 @@ export function ExplorePage() {
           <div className="absolute inset-0 bg-gradient-glow opacity-50 blur-3xl -z-10"></div>
         </div>
         <p className="text-xl text-base-content/80 max-w-3xl mx-auto leading-relaxed">
-          发现创作者的未来影响力，以更低成本锁定优质内容曝光机会
+          发现潜力个人IP（个人品牌），以当前价格预购未来的粉丝注意力，分享影响力成长收益
         </p>
         <div className="flex justify-center gap-2 text-sm text-base-content/60">
           <span className="px-3 py-1 bg-primary/10 rounded-full">🚀 Web3原生</span>

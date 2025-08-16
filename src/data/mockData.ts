@@ -5,8 +5,8 @@ export const mockCampaigns: Campaign[] = [
   {
     id: '1',
     creator: '0x742d35Cc5Ba1e2e5b9bC0e0ed50E38A8e9b9e999',
-    creatorHandle: '@crypto_alice',
-    creatorAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=alice',
+    creatorHandle: '@cellinlab',
+    creatorAvatar: '/avatar.png',
     kind: CampaignKind.Tweet,
     kindLabel: 'Tweet',
     basePrice: BigInt('100000000000000000'), // 0.1 ETH
@@ -18,21 +18,21 @@ export const mockCampaigns: Campaign[] = [
     createdAt: '2024-01-15T10:00:00Z',
     metaURI: {
       name: 'IPIPO #1 — Tweet',
-      description: '为您的项目发布一条高质量推文，7天内交付',
-      external_url: 'https://x.com/crypto_alice',
+      description: '预购我个人IP成长为大V时的推文影响力，投资我的个人品牌，享受未来更高价值的粉丝注意力',
+      external_url: 'https://x.com/cellinlab',
       image: 'https://picsum.photos/400/200?random=1',
       attributes: [
         { trait_type: 'Kind', value: 'Tweet' },
         { trait_type: 'SLA', value: 'Deliver within 7 days after DM.' },
-        { trait_type: 'Showcase', value: 'https://x.com/crypto_alice/status/12345' }
+        { trait_type: 'Showcase', value: 'https://x.com/cellinlab/status/1956527249223483563' }
       ]
     }
   },
   {
     id: '2',
     creator: '0x8ba1f109551bD432803012645Hac136c',
-    creatorHandle: '@defi_bob',
-    creatorAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=bob',
+    creatorHandle: '@cellinlab',
+    creatorAvatar: '/avatar.png',
     kind: CampaignKind.Quote,
     kindLabel: 'Quote',
     basePrice: BigInt('150000000000000000'), // 0.15 ETH
@@ -44,21 +44,21 @@ export const mockCampaigns: Campaign[] = [
     createdAt: '2024-01-14T15:30:00Z',
     metaURI: {
       name: 'IPIPO #2 — Quote Tweet',
-      description: '专业引用转推您的内容，带来更多曝光',
-      external_url: 'https://x.com/defi_bob',
+      description: '以当前0.15 ETH预购我个人IP未来的引用转推权益，随着个人品牌影响力增长，同样服务将价值更高',
+      external_url: 'https://x.com/cellinlab',
       image: 'https://picsum.photos/400/200?random=2',
       attributes: [
         { trait_type: 'Kind', value: 'Quote' },
         { trait_type: 'SLA', value: 'Deliver within 3 days after coordination.' },
-        { trait_type: 'Showcase', value: 'https://x.com/defi_bob/status/54321' }
+        { trait_type: 'Showcase', value: 'https://x.com/cellinlab/status/1956527249223483563' }
       ]
     }
   },
   {
     id: '3',
     creator: '0x1234567890123456789012345678901234567890',
-    creatorHandle: '@nft_carol',
-    creatorAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=carol',
+    creatorHandle: '@cellinlab',
+    creatorAvatar: '/avatar.png',
     kind: CampaignKind.Reply,
     kindLabel: 'Reply',
     basePrice: BigInt('50000000000000000'), // 0.05 ETH
@@ -70,21 +70,21 @@ export const mockCampaigns: Campaign[] = [
     createdAt: '2024-01-13T09:15:00Z',
     metaURI: {
       name: 'IPIPO #3 — Reply',
-      description: '在您的推文下进行专业回复互动',
-      external_url: 'https://x.com/nft_carol',
+      description: '早鸟价0.05 ETH锁定我个人IP未来的回复互动服务，投资我的个人品牌成长，分享影响力增值收益',
+      external_url: 'https://x.com/cellinlab',
       image: 'https://picsum.photos/400/200?random=3',
       attributes: [
         { trait_type: 'Kind', value: 'Reply' },
         { trait_type: 'SLA', value: 'Deliver within 24 hours after request.' },
-        { trait_type: 'Showcase', value: 'https://x.com/nft_carol/status/98765' }
+        { trait_type: 'Showcase', value: 'https://x.com/cellinlab/status/1956527249223483563' }
       ]
     }
   },
   {
     id: '4',
     creator: '0x742d35Cc5Ba1e2e5b9bC0e0ed50E38A8e9b9e999',
-    creatorHandle: '@crypto_alice',
-    creatorAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=alice',
+    creatorHandle: '@cellinlab',
+    creatorAvatar: '/avatar.png',
     kind: CampaignKind.Tweet,
     kindLabel: 'Tweet',
     basePrice: BigInt('200000000000000000'), // 0.2 ETH
@@ -97,7 +97,7 @@ export const mockCampaigns: Campaign[] = [
     metaURI: {
       name: 'IPIPO #4 — Premium Tweet',
       description: '高质量推文内容，包含详细分析和见解',
-      external_url: 'https://x.com/crypto_alice',
+      external_url: 'https://x.com/cellinlab',
       image: 'https://picsum.photos/400/200?random=4',
       attributes: [
         { trait_type: 'Kind', value: 'Tweet' },

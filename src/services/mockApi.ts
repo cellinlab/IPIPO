@@ -147,7 +147,7 @@ export const campaignApi = {
         id: (mockCampaigns.length + 1).toString(),
         creator: '0x742d35Cc5Ba1e2e5b9bC0e0ed50E38A8e9b9e999', // 模拟当前用户地址
         creatorHandle: campaignData.creatorHandle,
-        creatorAvatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${campaignData.creatorHandle}`,
+        creatorAvatar: '/avatar.png',
         kind: campaignData.kind,
         kindLabel: ['Tweet', 'Quote', 'Reply'][campaignData.kind],
         basePrice: campaignData.basePrice,
@@ -160,12 +160,12 @@ export const campaignApi = {
         metaURI: {
           name: campaignData.name,
           description: campaignData.description,
-          external_url: `https://x.com/${campaignData.creatorHandle.replace('@', '')}`,
+          external_url: 'https://x.com/cellinlab',
           image: `https://picsum.photos/400/200?random=${Date.now()}`,
           attributes: [
             { trait_type: 'Kind', value: ['Tweet', 'Quote', 'Reply'][campaignData.kind] },
             { trait_type: 'SLA', value: 'Deliver within 7 days after coordination.' },
-            ...(campaignData.showcaseUrl ? [{ trait_type: 'Showcase', value: campaignData.showcaseUrl }] : [])
+            ...(campaignData.showcaseUrl ? [{ trait_type: 'Showcase', value: campaignData.showcaseUrl }] : [{ trait_type: 'Showcase', value: 'https://x.com/cellinlab/status/1956527249223483563' }])
           ]
         }
       }

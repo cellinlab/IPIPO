@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Github, Twitter, FileText } from 'lucide-react'
 import { Logo } from '@/components/Logo'
 
@@ -11,9 +12,9 @@ export function Footer() {
       
       {/* 导航链接 */}
       <nav className="grid grid-flow-col gap-6">
-        <a className="link link-hover text-base-content/80 hover:text-primary transition-colors">关于我们</a>
-        <a className="link link-hover text-base-content/80 hover:text-primary transition-colors">联系方式</a>
-        <a className="link link-hover text-base-content/80 hover:text-primary transition-colors">帮助文档</a>
+        <Link to="/about" className="link link-hover text-base-content/80 hover:text-primary transition-colors">项目介绍</Link>
+        <Link to="/transparency" className="link link-hover text-base-content/80 hover:text-primary transition-colors">透明度面板</Link>
+        <a href="https://x.com/cellinlab" target="_blank" rel="noopener noreferrer" className="link link-hover text-base-content/80 hover:text-primary transition-colors">联系我们</a>
         <a className="link link-hover text-base-content/80 hover:text-primary transition-colors">条款协议</a>
       </nav>
       
@@ -51,7 +52,7 @@ export function Footer() {
       <aside className="border-t border-base-300 pt-6 w-full text-center">
         <p className="font-medium mb-2">Copyright © 2024 - IPIPO. All rights reserved.</p>
         <p className="text-sm text-base-content/60 mb-2">
-          影响力预售平台 - 让创作者把未来的注意力今天就变现
+          个人IP影响力预售平台 - 将个人品牌的X平台曝光服务铸造为链上权益凭证
         </p>
         <div className="flex justify-center gap-4 text-xs text-base-content/50">
           <span>🚀 Web3原生</span>

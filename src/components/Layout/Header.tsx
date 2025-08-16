@@ -58,7 +58,7 @@ export function Header() {
               to="/my-vouchers" 
               className={`${isActive('/my-vouchers') ? 'active' : ''}`}
             >
-              我的代金券
+              我的权益凭证
             </Link>
           </li>
           <li>
@@ -67,6 +67,22 @@ export function Header() {
               className={`${isActive('/dashboard') ? 'active' : ''}`}
             >
               创作者面板
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/transparency" 
+              className={`${isActive('/transparency') ? 'active' : ''}`}
+            >
+              透明度面板
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/about" 
+              className={`${isActive('/about') ? 'active' : ''}`}
+            >
+              项目介绍
             </Link>
           </li>
         </ul>
