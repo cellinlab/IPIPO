@@ -1,4 +1,4 @@
-import { Campaign, CampaignKind, CampaignStatus, Voucher, Purchase, Redemption, RedemptionStatus } from '@/types'
+import { Campaign, CampaignKind, CampaignStatus, Voucher, RedemptionStatus, Purchase, Redemption } from '@/types'
 
 // Mock活动数据
 export const mockCampaigns: Campaign[] = [
@@ -126,7 +126,7 @@ export const mockVouchers: Voucher[] = [
         totalPaid: BigInt('300000000000000000'),
         timestamp: '2024-01-16T10:30:00Z',
         txHash: '0x1111...'
-      },
+      } as Purchase,
       {
         id: 'p2',
         campaignId: '1',
@@ -136,7 +136,7 @@ export const mockVouchers: Voucher[] = [
         totalPaid: BigInt('200000000000000000'),
         timestamp: '2024-01-17T15:20:00Z',
         txHash: '0x2222...'
-      }
+      } as Purchase
     ],
     redemptionHistory: [
       {
@@ -148,7 +148,7 @@ export const mockVouchers: Voucher[] = [
         timestamp: '2024-01-18T12:00:00Z',
         txHash: '0x3333...',
         note: '推文已发布，内容质量很高'
-      },
+      } as Redemption,
       {
         id: 'r2',
         campaignId: '1',
@@ -157,7 +157,7 @@ export const mockVouchers: Voucher[] = [
         status: RedemptionStatus.Completed,
         timestamp: '2024-01-19T09:30:00Z',
         txHash: '0x4444...'
-      }
+      } as Redemption
     ]
   },
   {
@@ -176,7 +176,7 @@ export const mockVouchers: Voucher[] = [
         totalPaid: BigInt('300000000000000000'),
         timestamp: '2024-01-15T11:15:00Z',
         txHash: '0x5555...'
-      }
+      } as Purchase
     ],
     redemptionHistory: [
       {
@@ -187,7 +187,7 @@ export const mockVouchers: Voucher[] = [
         status: RedemptionStatus.Completed,
         timestamp: '2024-01-16T16:45:00Z',
         txHash: '0x6666...'
-      }
+      } as Redemption
     ]
   }
 ]
@@ -203,7 +203,7 @@ export function getCampaignsByCreator(creatorAddress: string): Campaign[] {
 }
 
 // 辅助函数：获取用户的代金券
-export function getVouchersByUser(userAddress: string): Voucher[] {
+export function getVouchersByUser(_userAddress: string): Voucher[] {
   // 这里简化处理，实际应该根据用户地址过滤
   return mockVouchers
 }

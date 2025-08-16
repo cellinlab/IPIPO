@@ -21,7 +21,7 @@ export function Footer() {
       <nav>
         <div className="grid grid-flow-col gap-6">
           <a 
-            href="https://github.com" 
+            href="https://github.com/cellinlab/IPIPO.git" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-base-content/60 hover:text-primary transition-colors p-2 hover:bg-primary/10 rounded-lg"
@@ -29,7 +29,7 @@ export function Footer() {
             <Github className="w-6 h-6" />
           </a>
           <a 
-            href="https://twitter.com" 
+            href="https://twitter.com/cellinlab" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-base-content/60 hover:text-primary transition-colors p-2 hover:bg-primary/10 rounded-lg"

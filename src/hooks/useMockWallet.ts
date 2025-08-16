@@ -37,7 +37,7 @@ const mockAccounts = [
 // Mock钱包状态管理
 export const useMockWallet = create<MockWalletState>()(
   persist(
-    (set, get) => ({
+    (set, _get) => ({
       isConnected: false,
       address: null,
       balance: BigInt('1000000000000000000000'), // 1000 ETH
@@ -111,7 +111,7 @@ export const useMockWallet = create<MockWalletState>()(
 )
 
 // 模拟交易函数
-export const mockTransaction = async (params: {
+export const mockTransaction = async (_params: {
   to?: string
   data?: string
   value?: bigint
