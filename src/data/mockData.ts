@@ -18,7 +18,7 @@ export const mockCampaigns: Campaign[] = [
     createdAt: '2024-01-15T10:00:00Z',
     metaURI: {
       name: 'IPIPO #1 — Tweet',
-      description: '预购我个人IP成长为大V时的推文影响力，投资我的个人品牌，享受未来更高价值的粉丝注意力',
+      description: '预购我个人IP成长为大V时的推文影响力，陪伴我的个人品牌成长，享受未来更高价值的粉丝注意力',
       external_url: 'https://x.com/cellinlab',
       image: 'https://picsum.photos/400/200?random=1',
       attributes: [

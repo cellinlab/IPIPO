@@ -288,7 +288,6 @@ export function AboutPage() {
             <div>
               <h4 className="font-semibold mb-3">❌ 我们不承诺的内容</h4>
               <ul className="space-y-2 text-sm">
-                <li>• 不保证投资收益</li>
                 <li>• 不提供分红回报</li>
                 <li>• 不承诺价格上涨</li>
                 <li>• 不进行二级市场操作</li>
@@ -302,53 +301,78 @@ export function AboutPage() {
       {/* Roadmap */}
       <div className="card bg-gradient-card border border-primary/20 shadow-web3">
         <div className="card-body">
-          <h2 className="card-title text-3xl mb-6 gradient-text">🗺️ 发展路线</h2>
+          <h2 className="card-title text-3xl mb-8 gradient-text">🗺️ 发展路线</h2>
           
-          <div className="timeline timeline-vertical">
-            <div className="timeline-item">
-              <div className="timeline-start timeline-box bg-primary text-primary-content">
-                <div className="font-bold">阶段 1</div>
-                <div className="text-sm">MVP 上线</div>
-              </div>
-              <div className="timeline-middle">
-                <CheckCircle className="w-5 h-5 text-primary" />
-              </div>
-              <div className="timeline-end">
-                <div className="text-sm text-base-content/70">
-                  基础功能、Mock 演示、前端完成
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* 阶段 1 - 已完成 */}
+            <div className="relative">
+              <div className="card bg-primary text-primary-content shadow-lg">
+                <div className="card-body text-center p-6">
+                  <div className="absolute -top-3 -right-3">
+                    <CheckCircle className="w-8 h-8 text-success bg-white rounded-full" />
+                  </div>
+                  <div className="text-4xl mb-3">🚀</div>
+                  <h3 className="text-xl font-bold mb-2">阶段 1</h3>
+                  <h4 className="text-lg font-semibold mb-3">MVP 上线</h4>
+                  <div className="text-sm opacity-90 space-y-1">
+                    <div>✅ 基础功能、Mock 演示、前端完成</div>
+                    <div>✅ 智能合约开发、测试网部署</div>
+                  </div>
                 </div>
               </div>
             </div>
-            
-            <div className="timeline-item">
-              <div className="timeline-start">
-                <div className="text-sm text-base-content/70">
-                  智能合约开发、测试网部署
-                </div>
-              </div>
-              <div className="timeline-middle">
-                <div className="w-5 h-5 bg-secondary rounded-full"></div>
-              </div>
-              <div className="timeline-end timeline-box bg-secondary text-secondary-content">
-                <div className="font-bold">阶段 2</div>
-                <div className="text-sm">合约集成</div>
-              </div>
-            </div>
-            
-            <div className="timeline-item">
-              <div className="timeline-start timeline-box bg-accent text-accent-content">
-                <div className="font-bold">阶段 3</div>
-                <div className="text-sm">功能扩展</div>
-              </div>
-              <div className="timeline-middle">
-                <div className="w-5 h-5 bg-accent rounded-full"></div>
-              </div>
-              <div className="timeline-end">
-                <div className="text-sm text-base-content/70">
-                  线性加价、信誉系统、多平台支持
+
+            {/* 阶段 2 - 进行中 */}
+            <div className="relative">
+              <div className="card bg-secondary text-secondary-content shadow-lg">
+                <div className="card-body text-center p-6">
+                  <div className="absolute -top-3 -right-3">
+                    <div className="w-8 h-8 bg-secondary-content text-secondary rounded-full flex items-center justify-center font-bold">
+                      2
+                    </div>
+                  </div>
+                  <div className="text-4xl mb-3">⚡</div>
+                  <h3 className="text-xl font-bold mb-2">阶段 2</h3>
+                  <h4 className="text-lg font-semibold mb-3">合约集成</h4>
+                  <div className="text-sm opacity-90 space-y-1">
+                    <div>🔄 智能合约开发、测试网部署</div>
+                    <div>🔄 钱包集成、合约交互</div>
+                    <div>🔄 事件监听、状态同步</div>
+                  </div>
                 </div>
               </div>
             </div>
+
+            {/* 阶段 3 - 规划中 */}
+            <div className="relative">
+              <div className="card bg-accent text-accent-content shadow-lg">
+                <div className="card-body text-center p-6">
+                  <div className="absolute -top-3 -right-3">
+                    <div className="w-8 h-8 bg-accent-content text-accent rounded-full flex items-center justify-center font-bold">
+                      3
+                    </div>
+                  </div>
+                  <div className="text-4xl mb-3">🌟</div>
+                  <h3 className="text-xl font-bold mb-2">阶段 3</h3>
+                  <h4 className="text-lg font-semibold mb-3">功能扩展</h4>
+                  <div className="text-sm opacity-90 space-y-1">
+                    <div>📈 线性加价、信誉系统</div>
+                    <div>🌐 多平台支持 (Instagram, TikTok)</div>
+                    <div>🔄 二级市场、代币流通</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 时间线连接线 - 仅在较大屏幕显示 */}
+          <div className="hidden md:flex items-center justify-center mt-8 space-x-4">
+            <div className="w-16 h-0.5 bg-primary"></div>
+            <div className="w-4 h-4 bg-primary rounded-full"></div>
+            <div className="w-16 h-0.5 bg-secondary"></div>
+            <div className="w-4 h-4 bg-secondary rounded-full"></div>
+            <div className="w-16 h-0.5 bg-accent"></div>
+            <div className="w-4 h-4 bg-accent rounded-full"></div>
           </div>
         </div>
       </div>
