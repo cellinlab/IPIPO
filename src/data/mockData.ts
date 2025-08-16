@@ -108,8 +108,9 @@ export const mockCampaigns: Campaign[] = [
   }
 ]
 
-// Mock代金券数据
+// Mock代金券数据 - 为不同用户添加购买记录
 export const mockVouchers: Voucher[] = [
+  // Alice (Creator) 也购买了自己的活动
   {
     campaignId: '1',
     campaign: mockCampaigns[0],
@@ -120,7 +121,7 @@ export const mockVouchers: Voucher[] = [
       {
         id: 'p1',
         campaignId: '1',
-        buyer: '0x742d35Cc5Ba1e2e5b9bC0e0ed50E38A8e9b9e999',
+        buyer: '0x742d35Cc5Ba1e2e5b9bC0e0ed50E38A8e9b9e999', // Alice
         amount: 3,
         unitPrice: BigInt('100000000000000000'),
         totalPaid: BigInt('300000000000000000'),
@@ -130,7 +131,7 @@ export const mockVouchers: Voucher[] = [
       {
         id: 'p2',
         campaignId: '1',
-        buyer: '0x742d35Cc5Ba1e2e5b9bC0e0ed50E38A8e9b9e999',
+        buyer: '0x742d35Cc5Ba1e2e5b9bC0e0ed50E38A8e9b9e999', // Alice
         amount: 2,
         unitPrice: BigInt('100000000000000000'),
         totalPaid: BigInt('200000000000000000'),
@@ -189,6 +190,60 @@ export const mockVouchers: Voucher[] = [
         txHash: '0x6666...'
       } as Redemption
     ]
+  },
+  
+  // Bob (Buyer) 的权益凭证
+  {
+    campaignId: '2',
+    campaign: mockCampaigns[1],
+    balance: 2,
+    totalPurchased: 3,
+    totalRedeemed: 1,
+    purchaseHistory: [
+      {
+        id: 'p_bob1',
+        campaignId: '2',
+        buyer: '0x8ba1f109551bD432803012645Hac136c', // Bob
+        amount: 3,
+        unitPrice: BigInt('150000000000000000'),
+        totalPaid: BigInt('450000000000000000'),
+        timestamp: '2024-01-15T12:00:00Z',
+        txHash: '0xbob1...'
+      } as Purchase
+    ],
+    redemptionHistory: [
+      {
+        id: 'r_bob1',
+        campaignId: '2',
+        redeemer: '0x8ba1f109551bD432803012645Hac136c', // Bob
+        proofURL: 'https://x.com/cellinlab/status/1956527249223483563',
+        status: RedemptionStatus.Completed,
+        timestamp: '2024-01-16T14:30:00Z',
+        txHash: '0xbob_redeem1...'
+      } as Redemption
+    ]
+  },
+  
+  // Carol (Trader) 的权益凭证
+  {
+    campaignId: '3',
+    campaign: mockCampaigns[2],
+    balance: 5,
+    totalPurchased: 5,
+    totalRedeemed: 0,
+    purchaseHistory: [
+      {
+        id: 'p_carol1',
+        campaignId: '3',
+        buyer: '0x1234567890123456789012345678901234567890', // Carol
+        amount: 5,
+        unitPrice: BigInt('50000000000000000'),
+        totalPaid: BigInt('250000000000000000'),
+        timestamp: '2024-01-14T09:15:00Z',
+        txHash: '0xcarol1...'
+      } as Purchase
+    ],
+    redemptionHistory: []
   }
 ]
 

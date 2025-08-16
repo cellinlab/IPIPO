@@ -1,5 +1,4 @@
 import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
 
 interface MockWalletState {
   isConnected: boolean
@@ -35,10 +34,8 @@ const mockAccounts = [
 ]
 
 // Mock钱包状态管理
-export const useMockWallet = create<MockWalletState>()(
-  persist(
-    (set, _get) => ({
-      isConnected: false,
+export const useMockWallet = create<MockWalletState>()((set, _get) => ({
+      isConnected: false,  // 默认未连接状态，模拟真实体验
       address: null,
       balance: BigInt('1000000000000000000000'), // 1000 ETH
       chainId: 1337, // Mock Local Chain
@@ -98,17 +95,7 @@ export const useMockWallet = create<MockWalletState>()(
           console.log(`切换到账户: ${account.name} (${account.address})`)
         }
       },
-    }),
-    {
-      name: 'mock-wallet-storage',
-      partialize: (state) => ({
-        isConnected: state.isConnected,
-        address: state.address,
-        balance: state.balance,
-      }),
-    }
-  )
-)
+    }))
 
 // 模拟交易函数
 export const mockTransaction = async (_params: {
