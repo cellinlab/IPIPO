@@ -1,8 +1,8 @@
 import { defineChain } from 'viem'
 
-// Monad Testnet 配置
+// Monad Testnet 配置 (官方数据)
 export const monadTestnet = defineChain({
-  id: 41454,
+  id: 10143,
   name: 'Monad Testnet',
   nativeCurrency: {
     decimals: 18,
@@ -11,13 +11,13 @@ export const monadTestnet = defineChain({
   },
   rpcUrls: {
     default: {
-      http: ['https://testnet-rpc.monad.xyz'], // 实际RPC由比赛方提供
+      http: ['https://testnet-rpc.monad.xyz/'],
     },
   },
   blockExplorers: {
     default: {
       name: 'Monad Testnet Explorer',
-      url: 'https://testnet-explorer.monad.xyz', // 实际浏览器URL由比赛方提供
+      url: 'https://testnet.monadexplorer.com/',
     },
   },
   testnet: true,

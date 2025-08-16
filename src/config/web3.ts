@@ -24,13 +24,13 @@ export const web3Config = getDefaultConfig({
 
 // 合约配置常量
 export const CONTRACT_CONFIG = {
-  // 这些值将在部署后更新
-  IPIPO_ADDRESS: getEnvVar('VITE_CONTRACT_ADDRESS', '0x0000000000000000000000000000000000000000') as `0x${string}`,
-  DEPLOYMENT_BLOCK: BigInt(getEnvVar('VITE_DEPLOY_BLOCK', '0')),
+  // 部署后的真实地址
+  IPIPO_ADDRESS: getEnvVar('VITE_CONTRACT_ADDRESS', '0xCDEA758D2D31dd07f28274db27eD24c7bf4476C0') as `0x${string}`,
+  DEPLOYMENT_BLOCK: BigInt(getEnvVar('VITE_DEPLOY_BLOCK', '31075502')),
   
   // 网络配置
-  CHAIN_ID: parseInt(getEnvVar('VITE_CHAIN_ID', '41454')),
-  RPC_URL: getEnvVar('VITE_RPC_URL', 'https://testnet-rpc.monad.xyz'),
+  CHAIN_ID: parseInt(getEnvVar('VITE_CHAIN_ID', '10143')),
+  RPC_URL: getEnvVar('VITE_RPC_URL', 'https://testnet-rpc.monad.xyz/'),
   
   // 应用配置
   PLATFORM_FEE: 250, // 2.5% in basis points

@@ -1,0 +1,11 @@
+{
+  "contractAddress": "0xCDEA758D2D31dd07f28274db27eD24c7bf4476C0",
+  "owner": "0xa50fEFB2162AaE734Ca588D81d68112eC0C417c1",
+  "platformFee": 250,
+  "feeRecipient": "0xa50fEFB2162AaE734Ca588D81d68112eC0C417c1",
+  "baseURI": "https://ipipo.vercel.app/api/metadata/",
+  "deploymentBlock": 31075954,
+  "network": "Monad Testnet",
+  "chainId": 10143,
+  "deployedAt": "2024-08-16T07:05:00Z"
+}

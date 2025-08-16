@@ -6,7 +6,17 @@ import {IPIPO} from "../src/IPIPO.sol";
 
 contract Deploy is Script {
     function run() external {
-        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
+        // 使用直接私钥或环境变量
+        uint256 deployerPrivateKey;
+        
+        // 优先使用命令行传入的私钥，否则从环境变量读取
+        try vm.envUint("PRIVATE_KEY") returns (uint256 key) {
+            deployerPrivateKey = key;
+        } catch {
+            // 如果环境变量失败，使用固定值（仅测试网）
+            deployerPrivateKey = 0x64ee1223936b817e1aa6c2dceea3a26c7050b811aa8229b9e1c59caa219fee68;
+        }
+        
         address deployerAddress = vm.addr(deployerPrivateKey);
         
         console.log("Deploying IPIPO contract...");
@@ -16,8 +26,8 @@ contract Deploy is Script {
         vm.startBroadcast(deployerPrivateKey);
         
         // Deploy the IPIPO contract
-        // Base URI can be updated later to point to IPFS
-        string memory baseURI = "https://ipipo.app/api/metadata/";
+        // Base URI pointing to your actual deployment
+        string memory baseURI = "https://ipipo.vercel.app/api/metadata/";
         address feeRecipient = deployerAddress; // Platform fee recipient
         
         IPIPO ipipo = new IPIPO(baseURI, feeRecipient);
